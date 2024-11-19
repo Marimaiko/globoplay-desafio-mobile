@@ -7,13 +7,18 @@ struct MyListView: View {
     var body: some View {
         NavigationView {
             VStack(alignment: .leading) {
-                Text("Minha lista")
-                    .font(.title)
-                    .bold()
-                    .padding(.leading)
+               
+                HStack {
+                    Text("Minha lista")
+                        .font(.title)
+                        .bold()
+                        .padding()
+                    Spacer()
+                }
+                .background(Color.black)
                 
                 ScrollView {
-                    LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 18), count: 3), spacing: 10) {
+                    LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 18), count: 3), spacing: 20) {
                         ForEach(0..<images.count, id: \.self) { n in
                             Image(images[n])
                                 .resizable()
@@ -26,7 +31,7 @@ struct MyListView: View {
                 }
             }
             .navigationBarHidden(true)
-            .background(Color.black)
+            .background(Color.backgroundGray)
             .foregroundColor(.white)
         }
     }

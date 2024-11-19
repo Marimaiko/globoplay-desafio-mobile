@@ -12,9 +12,9 @@ struct ContentView: View {
     var body: some View {
         VStack (spacing: 0) {
             if selectedTab == 0 {
-                MyListView()
-            } else {
                 HomeView()
+            } else {
+                MyListView()
             }
             
             Divider()

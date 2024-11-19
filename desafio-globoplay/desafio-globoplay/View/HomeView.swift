@@ -10,6 +10,19 @@ import SwiftUI
 struct HomeView: View {
     var body: some View {
         VStack(alignment: .leading) {
+            HStack () {
+                Text("Globoplay")
+                    .frame(
+                    maxWidth: .infinity,
+                    alignment: .center
+                    )
+                    .font(.custom("Montserrat", size: 28))
+                    .bold()
+                    .foregroundStyle(Color.white)
+                    .padding()
+                Spacer()
+            }.background(Color.black)
+            
             NavigationView {
                 ScrollView {
                     ScrollView(.horizontal) {

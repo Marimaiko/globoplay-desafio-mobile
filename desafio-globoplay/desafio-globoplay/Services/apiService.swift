@@ -12,7 +12,6 @@ import Foundation
 
 let baseURL = "https://api.themoviedb.org/3"
 let posterURL = "https://image.tmdb.org/t/p/original"
-let youtubeURL = "https://www.youtube.com/watch?v="
 
 let headers = [
   "accept": "application/json",
